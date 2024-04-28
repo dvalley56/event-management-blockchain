@@ -113,13 +113,13 @@ const Navigation = ({ account, setAccount, tokenMaster, provider }) => {
       </button>
 
       {account ? (
-        <button type="button" className="nav__connect px-4 bg-blue-600">
+        <button type="button" className="nav__connect mr-8 px-4 bg-blue-600">
           {account.slice(0, 6) + "..." + account.slice(38, 42)}
         </button>
       ) : (
         <button
           type="button"
-          className="nav__connect px-4 bg-gray-700 hover:bg-blue-600 transition-colors duration-300"
+          className="nav__connect px-4 mr-8 bg-gray-700 hover:bg-blue-600 transition-colors duration-300"
           onClick={connectHandler}
         >
           Connect
