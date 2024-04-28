@@ -218,11 +218,6 @@
         "internalType": "uint256",
         "name": "_id",
         "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_address",
-        "type": "address"
       }
     ],
     "name": "getSeatsBoughtByAddress",
@@ -293,6 +288,30 @@
       }
     ],
     "name": "isApprovedForAll",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_seat",
+        "type": "uint256"
+      }
+    ],
+    "name": "isTicketValid",
     "outputs": [
       {
         "internalType": "bool",

@@ -80,8 +80,12 @@ contract TokenMaster is ERC721 {
         return seatsTaken[_id];
     }
 
-     function getSeatsBoughtByAddress(uint256 _id, address _address) public view returns (uint256[] memory) {
-        return seatsBoughtByAddress[_id][_address];
+     function getSeatsBoughtByAddress(uint256 _id) public view returns (uint256[] memory) {
+        return seatsBoughtByAddress[_id][msg.sender];
+    }
+
+    function isTicketValid(uint256 _id, uint256 _seat) public view returns (bool) {
+        return seatTaken[_id][_seat] == msg.sender;
     }
 
     function withdraw() public onlyOwner {
